@@ -11,6 +11,7 @@
             {% if request.user.is_admin %}
             <a class="nav-link active" href="{% url 'home:bucket' %}">Bucket</a>
             {% endif %}
+            <a class="nav-link active" href="{% url 'orders:cart' %}">CART {{ cart|length }}</a>
         </div>
     </div>
 </nav>
