@@ -13,7 +13,7 @@ class Order(models.Model):
 		ordering = ('paid', '-updated')
 
 	def __str__(self):
-		return f'{self.user} - {self.id}'
+		return f'{self.user} - {str(self.id)}'
 
 	def get_total_price(self):
 		return sum(item.get_cost() for item in self.items.all())
@@ -26,7 +26,7 @@ class OrderItem(models.Model):
 	quantity = models.IntegerField(default=1)
 
 	def __str__(self):
-		return self.id
+		return str(self.id)
 
 	def get_cost(self):
 		return self.price * self.quantity
