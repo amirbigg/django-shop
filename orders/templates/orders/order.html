@@ -4,4 +4,10 @@
     <h3>Checkout</h3>
     <p>Total: {{ order.get_total_price }}</p>
     <a href="{% url 'orders:order_pay' order.id %}" class="btn btn-primary">Pay</a>
+<br><br>
+    <form action="{% url 'orders:apply_coupon' order.id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Apply">
+    </form>
 {% endblock %}
