@@ -10,6 +10,7 @@ import json
 from django.http import HttpResponse
 import datetime
 from django.contrib import messages
+from django.core.exceptions import PermissionDenied
 
 
 class CartView(View):
@@ -20,6 +21,8 @@ class CartView(View):
 
 class CartAddView(View):
 	def post(self, request, product_id):
+		if not request.user.has_perm('orders.add_order'):
+			raise PermissionDenied()
 		cart = Cart(request)
 		product = get_object_or_404(Product, id=product_id)
 		form = CartAddForm(request.POST)
