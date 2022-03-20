@@ -10,7 +10,7 @@ click==8.0.4
 click-didyoumean==0.3.0
 click-plugins==1.1.1
 click-repl==0.2.0
-Django==3.2.12
+Django==4.0.2
 django-celery-beat==2.2.1
 django-storages==1.12.3
 django-timezone-field==4.2.3
