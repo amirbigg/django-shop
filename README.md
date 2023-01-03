@@ -11,10 +11,10 @@
 
 
 
+## Code Sample
 
 ```python
 	
-	echo "this project is been made for you!"
 
 	def show():
 		reutrn "Shop";
