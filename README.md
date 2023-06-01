@@ -8,15 +8,3 @@
 * user shopping history
 * responsive
 * ultimate security
-
-
-
-## Code Sample
-
-```python
-	
-
-	def show():
-		reutrn "Shop";
-
-```
